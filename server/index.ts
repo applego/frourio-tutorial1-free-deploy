@@ -4,7 +4,12 @@ import helmet from 'fastify-helmet'
 import cors from 'fastify-cors'
 import fastifyStatic from 'fastify-static'
 import fastifyJwt from 'fastify-jwt'
-import { JWT_SECRET, SERVER_PORT, BASE_PATH } from './service/envValues'
+import {
+  JWT_SECRET,
+  SERVER_PORT,
+  BASE_PATH,
+  SERVER_IP
+} from './service/envValues'
 import server from './$server'
 
 const fastify = Fastify()
@@ -19,4 +24,4 @@ fastify.register(fastifyJwt, { secret: JWT_SECRET })
 
 server(fastify, { basePath: BASE_PATH })
 
-fastify.listen(SERVER_PORT)
+fastify.listen(SERVER_PORT, SERVER_IP)
