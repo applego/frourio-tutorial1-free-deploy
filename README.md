@@ -10,7 +10,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+Open [http://localhost:3013](http://localhost:3013) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
@@ -28,3 +28,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 構成
+
+- Server engine : Fastify (5x faster)
+- Client framework : Next.js (React)
+- Building mode : Static (export)
+- HTTP client of aspida : axios
+- Deamon process manager : None
+- O/R mapping tool : Prisma (recommended)
+- Database type of Prisma : PostgreSQL
+  - server/prisma/.env HOST= ... localhost
+  - server/prisma/.env PORT= ... 5432
+  - server/prisma/.env USER= ... postgres
+  - server/prisma/.env PASSWORD= ... password
+  - server/prisma/.env DATABASE= ... frourio
+- Testing framework : Jest
+- Package manager : Yarn
+- CI config : None
